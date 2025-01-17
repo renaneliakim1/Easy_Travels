@@ -1,0 +1,202 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap');
+
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', 'sans-serif';
+}
+
+
+:root {
+  --fundo-dark: #2e2e2e;
+  --texto-dark: #f8f8f8;
+  --texto-hover-dark: #ee826f;
+  --texto-hover-light: #1857f6;
+
+}
+
+/* Estilos para o tema claro */
+body.light-theme {
+  background-color: var(--fundo-light);
+  color: var(--texto-light);
+}
+
+/* Estilos para o tema escuro */
+body.dark-theme {
+  background-color: var(--fundo-dark);
+  color: var(--texto-dark);
+}
+
+
+
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.5rem 1rem;
+  /*  background-color: var(--cor-fundo);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); */
+  border-radius: 8px;
+}
+
+.contacts {
+  display: flex;
+  flex-direction: column;
+  font-size: 0.8rem; 
+}
+
+.contacts p {
+  margin: 0px;
+}
+
+
+.logo img {
+  width: 250px;
+  height: auto;
+}
+
+.options {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+}
+
+.languages img {
+  width: 1.5rem;
+  height: 1.5rem;
+}
+
+nav ul {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 3rem;
+  list-style: none;
+  cursor: pointer;
+  padding-left: 15rem;
+  padding-right: 15rem;
+
+
+
+}
+
+
+ul a {
+  text-decoration: none;
+  color: var(--text-light);
+  font-weight: 500;
+
+}
+
+
+ul a:hover {
+  color: var(--texto-hover-light);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Estilizaçao do botão temas*/
+
+/* From Uiverse.io by rishichawda */
+/* The switch - the box around the slider */
+#theme-toggle-button {
+  font-size: 4px;
+  position: relative;
+  display: inline-block;
+  width: 3rem;
+  cursor: pointer;
+}
+
+/* Hide default HTML checkbox */
+#toggle {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+#container,
+#patches,
+#stars,
+#button,
+#sun,
+#moon,
+#cloud {
+  transition-property: all;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 0.25s;
+}
+
+/* night sky background */
+#toggle:checked+svg #container {
+  fill: #2b4360;
+}
+
+/* move button to right when checked */
+#toggle:checked+svg #button {
+  transform: translate(28px, 2.333px);
+}
+
+/* show/hide sun and moon based on checkbox state */
+#sun {
+  opacity: 1;
+}
+
+#toggle:checked+svg #sun {
+  opacity: 0;
+}
+
+#moon {
+  opacity: 0;
+}
+
+#toggle:checked+svg #moon {
+  opacity: 1;
+}
+
+/* show or hide background items on checkbox state */
+#cloud {
+  opacity: 1;
+}
+
+#toggle:checked+svg #cloud {
+  opacity: 0;
+}
+
+#stars {
+  opacity: 0;
+}
+
+#toggle:checked+svg #stars {
+  opacity: 1;
+}
+
+
+
+
+
+
+
+
+
+
+
