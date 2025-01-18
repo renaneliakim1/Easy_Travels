@@ -1,26 +1,21 @@
-// Carregar o tema preferido do usuário ao carregar a página
-window.addEventListener('DOMContentLoaded', () => {
-    const toggle = document.getElementById('toggle');
-    if (localStorage.getItem('theme') === 'dark') {
-        toggle.checked = true;
-        document.body.classList.add('dark-theme');
-        document.body.classList.remove('light-theme');
-    } else {
-        toggle.checked = false;
-        document.body.classList.add('light-theme');
-        document.body.classList.remove('dark-theme');
-    }
+// Seleciona o input do botão switch
+const themeToggle = document.getElementById("input");
+
+// Adiciona um listener para o evento de mudança (change)
+themeToggle.addEventListener("change", () => {
+  // Alterna a classe 'dark-theme' no body com base no estado do checkbox
+  if (themeToggle.checked) {
+    document.body.classList.add("light-theme");
+    document.body.classList.remove("dark-theme");
+  } else {
+    document.body.classList.add("dark-theme");
+    document.body.classList.remove("light-theme");
+  }
 });
 
-// Função para alternar entre os temas
-document.getElementById('toggle').addEventListener('change', function () {
-    if (this.checked) {
-        document.body.classList.add('dark-theme');
-        document.body.classList.remove('light-theme');
-        localStorage.setItem('theme', 'dark');
-    } else {
-        document.body.classList.add('light-theme');
-        document.body.classList.remove('dark-theme');
-        localStorage.setItem('theme', 'light');
-    }
-});
+// Define o tema inicial com base no estado do checkbox
+if (themeToggle.checked) {
+  document.body.classList.add("light-theme");
+} else {
+  document.body.classList.add("dark-theme");
+}
