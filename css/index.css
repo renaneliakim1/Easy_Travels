@@ -78,7 +78,18 @@ header {
 .theme {
   display: flex;
   gap: 1rem;
+  align-items: center;
+  justify-content: center;
 }
+
+.theme a {
+ text-decoration: none;
+ color: #D34A25;
+}
+.theme a:hover {
+  text-decoration: none;
+  color: #ee826f;
+ }
 
 #navbarSupportedContent>ul {
   display: flex;
