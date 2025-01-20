@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sign Up</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body class="dark">
+  <div class="flex flex-col items-center justify-center h-screen">
+    <div class="w-full max-w-md bg-gray-800 rounded-lg shadow-md p-6">
+      <h2 class="text-2xl font-bold text-gray-200 mb-4">Sign Up</h2>
+      <form class="flex flex-col">
+        <div class="flex space-x-4 mb-4">
+          <input
+            placeholder="First Name"
+            class="input"
+            type="text"
+          />
+          <input
+            placeholder="Last Name"
+            class="input"
+            type="text"
+          />
+        </div>
+        <input
+          placeholder="Email"
+          class="input mb-4"
+          type="email"
+        />
+        <input
+          placeholder="Confirm Email"
+          class="input mb-4"
+          type="email"
+        />
+        <input
+          placeholder="Password"
+          class="input mb-4"
+          type="password"
+        />
+        <input
+          placeholder="Confirm Password"
+          class="input mb-4"
+          type="password"
+        />
+        <label class="text-sm mb-2 text-gray-200 cursor-pointer" for="gender">
+          Gender
+        </label>
+        <select
+          class="input mb-4"
+          id="gender"
+        >
+          <option value="male">Male</option>
+          <option value="female">Female</option>
+          <option value="other">Other</option>
+        </select>
+        <label class="text-sm mb-2 text-gray-200 cursor-pointer" for="age">
+          Age
+        </label>
+        <input
+          class="input"
+          id="age"
+          type="date"
+        />
+        <p class="text-white mt-4">
+          Already have an account?
+          <a class="text-sm text-blue-500 hover:underline" href="#"
+            >Login</a
+          >
+        </p>
+        <button
+          class="btn mt-4"
+          type="submit"
+        >
+          Sign Up
+        </button>
+      </form>
+    </div>
+  </div>
+</body>
+</html>
+
+
+<style>
+
+body.dark {
+  background-color: #1a202c; /* Dark background */
+}
+
+.flex {
+  display: flex;
+}
+
+.flex-col {
+  flex-direction: column;
+}
+
+.items-center {
+  align-items: center;
+}
+
+.justify-center {
+  justify-content: center;
+}
+
+.h-screen {
+  height: 100vh;
+}
+
+.bg-gray-800 {
+  background-color: #2d3748;
+}
+
+.rounded-lg {
+  border-radius: 0.5rem;
+}
+
+.shadow-md {
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.p-6 {
+  padding: 1.5rem;
+}
+
+.text-2xl {
+  font-size: 1.5rem;
+}
+
+.font-bold {
+  font-weight: bold;
+}
+
+.text-gray-200 {
+  color: #edf2f7;
+}
+
+.mb-4 {
+  margin-bottom: 1rem;
+}
+
+.input {
+  background-color: #4a5568;
+  color: #edf2f7;
+  border: none;
+  border-radius: 0.375rem;
+  padding: 0.5rem;
+  width: 100%;
+  transition: background-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+}
+
+.input:focus {
+  background-color: #2d3748;
+  outline: none;
+  box-shadow: 0 0 0 1px #4299e1;
+}
+
+.btn {
+  background: linear-gradient(to right, #667eea, #5a67d8);
+  color: #ffffff;
+  font-weight: bold;
+  padding: 0.5rem 1rem;
+  border-radius: 0.375rem;
+  transition: background-color 0.15s ease-in-out;
+}
+
+.btn:hover {
+  background: linear-gradient(to right, #5a67d8, #4c51bf);
+}
+
+.text-blue-500 {
+  color: #4299e1;
+}
+
+.text-blue-500:hover {
+  text-decoration: underline;
+}
+
+.cursor-pointer {
+  cursor: pointer;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@keyframes circle-out-top-right {
+  from {
+    clip-path: circle(125%);
+  }
+  to {
+    clip-path: circle(0% at top right);
+  }
+}
+
+[transition-style="out:circle:top-right"] {
+  animation: 2.5s cubic-bezier(.25, 1, .30, 1) circle-out-top-right both;
+}
+
+
+</style>
