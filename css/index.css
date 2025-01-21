@@ -1194,6 +1194,21 @@ iframe {
 }
 
 
+::-webkit-scrollbar{
+  width: 7px;
+}
+
+::-webkit-scrollbar-track{
+  border-radius: 5px;
+  background-color: rgb(255, 255, 255);
+}
+
+::-webkit-scrollbar-thumb{
+  border-radius: 8px;
+  background-color: #ee826f;
+} 
+
+
 
 
 

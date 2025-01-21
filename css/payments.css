@@ -24,6 +24,9 @@ body.light-theme {
     color: var(--texto-light);
 }
 
+
+
+
 /* Estilos para o tema escuro */
 body.dark-theme {
     background-color: var(--fundo-dark);
@@ -35,10 +38,10 @@ body.dark-theme .icon path {
     fill: var(--texto-hover-dark);
 }
 
-.null{
+.null {
     width: 250px;
-  }
-  
+}
+
 
 
 header {
@@ -102,6 +105,7 @@ header {
 
 
 
+
 #navbarSupportedContent>ul {
     display: flex;
     flex-direction: row;
@@ -116,6 +120,7 @@ nav {
     align-items: center;
     background-color: transparent;
     font-weight: 500;
+    width: 100%;
 }
 
 
@@ -148,227 +153,196 @@ main {
     display: flex;
     justify-content: center;
     align-items: center;
-
+    padding: 2%;
+    height: 90vh;
 }
 
 
 
 
 
+/* estilização do form de payments*/
+.modal {
+    display: flex;
+    width: fit-content;
+    height: fit-content;
+    background: #ffffff;
+    box-shadow:
+        0px 187px 75px rgba(0, 0, 0, 0.01),
+        0px 105px 63px rgba(0, 0, 0, 0.05),
+        0px 47px 47px rgba(0, 0, 0, 0.09),
+        0px 12px 26px rgba(0, 0, 0, 0.1),
+        0px 0px 0px rgba(0, 0, 0, 0.1);
+    border-radius: 26px;
+    max-width: 450px;
+}
+
+
+h1{
+    text-align: center;
+}
 
 .form {
     display: flex;
     flex-direction: column;
-    gap: 10px;
-    background-color: #ffffff;
-    padding: 30px;
-    width: 450px;
-    height: 50rem;
-    border-radius: 20px;
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    gap: 20px;
+    padding: 20px;
 }
 
-
-
-.dark-theme .form {
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-    background-color: var(--fundo-dark);
-    padding: 30px;
-    width: 450px;
-    height: 50rem;
-    border-radius: 20px;
-    /*  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif; */
+.payment--options {
+    width: calc(100% - 40px);
+    display: grid;
+    grid-template-columns: 33% 34% 33%;
+    gap: 20px;
+    padding: 10px;
 }
 
-/* ::placeholder {
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-} */
-
-.form button {
-    align-self: flex-end;
-}
-
-.flex-column>label {
-    color: #151717;
-    font-weight: 600;
-}
-
-.inputForm {
-    border: 1.5px solid #ecedec;
-    border-radius: 10px;
-    height: 50px;
-    display: flex;
-    align-items: center;
-    padding-left: 10px;
-    transition: 0.2s ease-in-out;
-}
-
-.input {
-    margin-left: 10px;
-    border-radius: 10px;
-    border: none;
-    width: 100%;
-    height: 100%;
-}
-
-
-.dark-theme .input {
-    margin-left: 10px;
-    border-radius: 10px;
-    border: none;
-    width: 100%;
-    height: 100%;
-    background-color: var(--fundo-dark);
-    color: #f8f8f8;
-}
-
-
-.dark-theme ::placeholder {
-    color: #ecedec;
-}
-
-.input:focus {
+.payment--options button {
+    height: 55px;
+    background: #f2f2f2;
+    border-radius: 11px;
+    padding: 0;
+    border: 0;
     outline: none;
-}
-
-.inputForm:focus-within {
-    border: 1.5px solid #2d79f3;
-}
-
-.flex-row {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    gap: 10px;
-    justify-content: space-between;
-}
-
-.flex-row>div>label {
-    font-size: 14px;
-    color: black;
-    font-weight: 400;
-}
-
-
-
-
-
-
-
-
-
-.span {
-    font-size: 14px;
-    margin-left: 5px;
-    color: #ee826f;
-    font-weight: 500;
-    cursor: pointer;
-}
-
-.button-submit {
-    margin: 20px 0 10px 0;
-    background-color: #151717;
-    border: none;
-    color: white;
-    font-size: 15px;
-    font-weight: 500;
-    border-radius: 10px;
-    height: 50px;
-    width: 100%;
-    cursor: pointer;
-}
-
-
-.dark-theme .button-submit {
-    background-color: var(--texto-hover-dark);
-}
-
-.button-submit:hover {
-    background-color: #252727;
-}
-
-
-.dark-theme .button-submit:hover {
-    background-color: #c96e35;
-}
-
-
-
-
-.p {
-    text-align: center;
-    color: black;
-    font-size: 14px;
-    margin: 5px 0;
-}
-
-.dark-theme .p {
-    color: #f8f8f8;
-}
-
-.dark-theme .flex-row label {
-    color: #f8f8f8;
-}
-
-
-
-.btn {
-    margin-top: 10px;
-    width: 100%;
-    height: 50px;
-    border-radius: 10px;
     display: flex;
     justify-content: center;
     align-items: center;
-    font-weight: 500;
+}
+
+.payment--options button svg {
+    height: 18px;
+}
+
+.payment--options button:last-child svg {
+    height: 22px;
+}
+
+.separator {
+    width: calc(100% - 20px);
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr;
     gap: 10px;
-    border: 1px solid #ef7911;
-    background-color: white;
-    cursor: pointer;
-    transition: 0.2s ease-in-out;
+    color: #8b8e98;
+    margin: 0 10px;
 }
 
-
-.btn:hover {
-    border: 1px solid #ee826f;
-
+.separator>p {
+    word-break: keep-all;
+    display: block;
+    padding-top: 10px;
+    text-align: center;
+    font-weight: 600;
+    font-size: 11px;
+    margin: auto;
 }
 
-
-.btn.google,
-.btn.apple {
-    border-color: #ee826f;
-    color: #ee826f;
+.separator .line {
+    display: inline-block;
+    width: 100%;
+    height: 1px;
+    border: 0;
+    background-color: #e8e8e8;
+    margin: auto;
 }
 
-
-
-.btn.google:hover,
-.btn.apple:hover {
-    border-color: #ee826f;
-    background-color: #ee826f;
+.credit-card-info--form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
 }
 
-
-svg .dark-theme {
-    color: aqua;
+.input_container {
+    width: 100%;
+    height: fit-content;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
 }
 
+.split {
+    display: grid;
+    grid-template-columns: 4fr 2fr;
+    gap: 15px;
+}
+
+.split input {
+    width: 100%;
+}
+
+.input_label {
+    font-size: 10px;
+    color: #8b8e98;
+    font-weight: 600;
+}
+
+.input_field {
+    width: auto;
+    height: 40px;
+    padding: 0 0 0 16px;
+    border-radius: 9px;
+    outline: none;
+    background-color: #f2f2f2;
+    border: 1px solid #e5e5e500;
+    transition: all 0.3s cubic-bezier(0.15, 0.83, 0.66, 1);
+}
+
+.input_field:focus {
+    border: 1px solid transparent;
+    box-shadow: 0px 0px 0px 2px #242424;
+    background-color: #f2f2f2;
+}
+
+button:hover{
+    background-color: #c96e35;
+}
+
+.purchase--btn {
+    height: 55px;
+    background: #f2f2f2;
+    border-radius: 11px;
+    border: 0;
+    outline: none;
+    color: #ffffff;
+    font-size: 15px;
+    font-weight: 700;
+    background: var(--fundo-dark);
+    box-shadow:
+        0px 0px 0px 0px #ffffff,
+        0px 0px 0px 0px #000000;
+    transition: all 0.3s cubic-bezier(0.15, 0.83, 0.66, 1);
+}
+
+.purchase--btn:hover{
+    background-color: #252525;
+} 
+
+
+.dark-theme .purchase--btn{
+    background: var(--texto-hover-dark);
+
+} 
+
+.dark-theme .purchase--btn:hover{
+    background-color: #c96e35;
+
+} 
 
 
 
+/* button.purchase--btn:hover {
+   background-color: #e9e4e2;
+} */
+ 
+/* Reset input number styles */
+.input_field::-webkit-outer-spin-button,
+.input_field::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
 
-
-
-
-
-
-
-
-
-
+.input_field[type="number"] {
+    -moz-appearance: textfield;
+}
 
 
 
@@ -737,6 +711,7 @@ iframe {
         transform: scale(1);
     }
 }
+
 
 
 ::-webkit-scrollbar{
