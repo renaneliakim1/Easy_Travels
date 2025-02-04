@@ -259,6 +259,12 @@ h1{
     gap: 5px;
 }
 
+
+.installments {
+    text-align: center;
+}
+
+
 .split {
     display: grid;
     grid-template-columns: 4fr 2fr;
