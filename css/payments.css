@@ -105,7 +105,6 @@ header {
 
 
 
-
 #navbarSupportedContent>ul {
     display: flex;
     flex-direction: row;
@@ -152,9 +151,10 @@ nav {
 main {
     display: flex;
     justify-content: center;
+    flex-direction: column;
     align-items: center;
     padding: 2%;
-    height: 90vh;
+    height: auto;
 }
 
 
@@ -178,8 +178,13 @@ main {
 }
 
 
-h1{
+h1 {
     text-align: center;
+}
+
+
+h2 .dark-theme {
+    color: var(--texto-dark);
 }
 
 .form {
@@ -188,6 +193,54 @@ h1{
     gap: 20px;
     padding: 20px;
 }
+
+
+
+
+h2 {
+  color: #333;
+}
+
+
+.tab-pane.fade.active.show{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+}
+
+#qrcodeCanvas {
+    border: 2px solid #333;
+    background-color: #fff;
+    margin: 20px 0;
+
+
+}
+
+.btn {
+    background-color: #007bff;
+    color: white;
+    padding: 12px 20px;
+    font-size: 16px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background 0.3s, transform 0.2s;
+}
+
+.btn:hover {
+    background-color: #0056b3;
+    transform: scale(1.05);
+}
+
+.btn:active {
+    background-color: #004494;
+    transform: scale(0.98);
+}
+
+
+
 
 .payment--options {
     width: calc(100% - 40px);
@@ -216,6 +269,48 @@ h1{
 .payment--options button:last-child svg {
     height: 22px;
 }
+
+
+#pills-tab {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+
+.destination {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.destination img {
+    width: 25rem;
+    height: 25rem;
+}
+
+
+.destination-info {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    font-weight: 500;
+
+
+}
+
+.destination-info ul {
+
+    text-align: justify;
+    gap: 60px;
+
+}
+
+
+
+
 
 .separator {
     width: calc(100% - 20px);
@@ -298,7 +393,7 @@ h1{
     background-color: #f2f2f2;
 }
 
-button:hover{
+button:hover {
     background-color: #c96e35;
 }
 
@@ -318,27 +413,27 @@ button:hover{
     transition: all 0.3s cubic-bezier(0.15, 0.83, 0.66, 1);
 }
 
-.purchase--btn:hover{
+.purchase--btn:hover {
     background-color: #252525;
-} 
+}
 
 
-.dark-theme .purchase--btn{
+.dark-theme .purchase--btn {
     background: var(--texto-hover-dark);
 
-} 
+}
 
-.dark-theme .purchase--btn:hover{
+.dark-theme .purchase--btn:hover {
     background-color: #c96e35;
 
-} 
+}
 
 
 
 /* button.purchase--btn:hover {
    background-color: #e9e4e2;
 } */
- 
+
 /* Reset input number styles */
 .input_field::-webkit-outer-spin-button,
 .input_field::-webkit-inner-spin-button {
@@ -720,19 +815,19 @@ iframe {
 
 
 
-::-webkit-scrollbar{
+::-webkit-scrollbar {
     width: 7px;
 }
 
-::-webkit-scrollbar-track{
+::-webkit-scrollbar-track {
     border-radius: 5px;
     background-color: rgb(255, 255, 255);
 }
 
-::-webkit-scrollbar-thumb{
+::-webkit-scrollbar-thumb {
     border-radius: 8px;
     background-color: #ee826f;
-} 
+}
 
 
 
