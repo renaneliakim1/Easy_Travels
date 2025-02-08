@@ -1373,7 +1373,7 @@ iframe {
 
 @media (width <=824px) {
 
-
+   .dark-theme main form,
   main form {
     display: flex;
     flex-direction: column;
@@ -1383,30 +1383,22 @@ iframe {
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.4);
     border-radius: 8px;
     padding: 1rem;
-    width: 90%;
+    width: 100%;
     height: 30rem;
 
   }
 
 
-  .dark-theme main form {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    gap: 1rem;
-    box-shadow: 0 2px 4px rgba(253, 253, 253, 0.4);
-    border-radius: 8px;
-    padding: 1rem;
-    width: 90%;
-  }
-
-
-
   #logo {
-    width: 14rem;
+    width: 11rem;
   }
 
+
+
+
+
+
+  
   .card-text {
     height: auto;
 
@@ -1423,6 +1415,21 @@ iframe {
 }
 
 @media (max-width <=767px) {
+
+  .dark-theme main form,
+  main form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.4);
+    border-radius: 8px;
+    padding: 0;
+    width: 100%;
+    height: 30rem;
+
+  }
  
 
 
@@ -1434,19 +1441,20 @@ iframe {
     justify-content: center;
     align-items: center;
     gap: 1rem;
-    width: 50%;
-    height: 50%;
+    width:100%;
+    height: 100%;
 
 
   }
 
 
-
-
-  .row-cols-1>* {
-    flex: 0 0 auto;
-    width: 100%;
+  .destinations{
+  padding: 1px;
   }
+
+
+
+
 
 
  
@@ -1454,6 +1462,11 @@ iframe {
   .card-text p {
     height: 3rem;
 
+  }
+
+
+  .row-cols-md-3>*{
+    width: 100%;
   }
 
 
@@ -1465,6 +1478,14 @@ iframe {
   .options-travel p {
 
     display: flex;
+
+  }
+
+
+  footer{
+    width: 100%;
+    padding: 0;
+
 
   }
 }
@@ -1481,7 +1502,7 @@ iframe {
 
 
   .card-body p {
-    height: 6rem;
+    height: 12rem;
 
   }
 
@@ -1515,13 +1536,12 @@ iframe {
   .settings {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    /* Duas colunas de tamanho igual */
     grid-template-rows: 1fr 1fr;
-    /* Duas linhas de tamanho igual */
     width: 100%;
     justify-content: center;
     align-items: center;
     justify-items: center;
+    gap: 1rem;
   }
 
 
@@ -1537,6 +1557,12 @@ iframe {
   .form-group {
     flex-direction: column;
     gap: 2rem;
+  }
+
+
+  footer{
+    font-size: 11px;
+    padding: 0;
   }
 
 }
