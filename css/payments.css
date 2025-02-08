@@ -324,6 +324,10 @@ h2 {
 
 }
 
+.dark-theme #bnt-gerar-qrcode{
+    color: var(--texto-light);
+}
+
 #bnt-gerar-qrcode:hover {
     background-color: #D34A25;
     font-weight: 600 !important;
@@ -466,6 +470,7 @@ button:hover {
 
 .input_field[type="number"] {
     -moz-appearance: textfield;
+    appearance: none; 
 }
 
 
