@@ -135,11 +135,6 @@ nav {
 
 }
 
-
-
-
-
-
 main {
   display: flex;
   flex-direction: column;
@@ -152,8 +147,19 @@ main {
 }
 
 
-strong{
+.carousel-caption.d-none.d-md-block {
+  display: block !important;
+}
+
+
+
+strong {
   font-size: 2.5rem;
+}
+
+
+.form-text strong {
+  font-size: 1rem;
 }
 
 
@@ -1145,7 +1151,7 @@ iframe {
 /* Responsividade */
 
 
-@media (width <=1366px) {
+/* @media (width <=1366px) {
 
   main {
     display: flex;
@@ -1153,7 +1159,7 @@ iframe {
     padding-right: 3%;
   }
 
-}
+} */
 
 
 @media (width <=1200px) {
@@ -1219,19 +1225,14 @@ iframe {
 
   }
 
+  /* 
   .settings {
     display: flex;
     justify-content: center;
     width: 100%;
   }
+ */
 
-
-
-
-  .destinations {
-    padding: 2rem;
-    font-size: 14px;
-  }
 
   #logo {
     width: 20rem;
@@ -1256,7 +1257,12 @@ iframe {
 
 @media (width <=991px) {
 
+  main,
+  main .dark-theme {
+    padding-left: 5%;
+    padding-right: 5%;
 
+  }
 
   .navbar-nav.me-auto.mb-2.mb-lg-0 {
     display: flex;
@@ -1268,14 +1274,6 @@ iframe {
   #logo {
     width: 15rem;
   }
-
-  .card-text {
-    height: 11rem;
-
-  }
-
-
-
 }
 
 
@@ -1284,45 +1282,97 @@ iframe {
   #logo {
     width: 14rem;
   }
-
-  .card-text {
-    height: 12rem;
-
-  }
-
-
-
 }
 
 
 @media (width <=824px) {
 
-
-  main form {
+  main .dark-theme,
+  main {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     gap: 1rem;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.4);
     border-radius: 8px;
     padding: 1rem;
-    width: 90%;
-    height: 30rem;
+    padding-left: 2%;
+    padding-right: 2%;
+    width: 100%;
+    height: 40rem;
 
   }
 
 
-  .dark-theme main form {
+  .title strong {
     display: flex;
-    flex-direction: column;
     justify-content: center;
     align-items: center;
-    gap: 1rem;
-    box-shadow: 0 2px 4px rgba(253, 253, 253, 0.4);
-    border-radius: 8px;
-    padding: 1rem;
-    width: 90%;
+    width: 100%;
+    font-size: 1.5rem;
+  }
+
+  .carousel.slide .dark-theme,
+  .carousel.slide {
+    width: 35rem;
+  }
+
+
+
+  /* Estiliza o carrossel */
+  .carousel-item {
+    position: relative;
+  }
+
+  /* Adiciona um fundo escuro sobre as imagens */
+  .carousel-item::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    /* Escurece a imagem */
+    z-index: 1;
+  }
+
+  /* Estiliza os textos do carrossel */
+  .carousel-caption {
+    position: absolute;
+    bottom: 15%;
+    left: 50%;
+    text-align: center;
+    z-index: 2;
+  }
+
+  .carousel-caption h5 {
+    font-size: 2rem;
+    /* Aumenta o tamanho do título */
+    font-weight: bold;
+    color: #fff;
+    /* Cor branca para destaque */
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.8);
+    /* Sombra no texto */
+  }
+
+  .carousel-caption p {
+    font-size: 1.2rem;
+    color: #f8f9fa;
+    /* Branco suave */
+    text-shadow: 1px 1px 6px rgba(0, 0, 0, 0.8);
+  }
+
+  /* Ajusta a descrição abaixo do carrossel */
+  .description {
+    text-align: center;
+    font-size: 1.4rem;
+    font-weight: bold;
+    color: #333;
+    background: rgba(94, 27, 1, 0.05);
+    padding: 15px;
+    border-radius: 10px;
+    margin-top: 10px;
   }
 
 
@@ -1331,10 +1381,6 @@ iframe {
     width: 14rem;
   }
 
-  .card-text {
-    height: auto;
-
-  }
 
 
 
@@ -1342,11 +1388,26 @@ iframe {
     width: 100%;
   }
 
+  .newsletter {
+    padding: 3rem;
+  }
+
 
 
 }
 
-@media (max-width <=767px) {
+@media (max-width <=768px) {
+
+  main .dark-theme,
+  main {
+    width: 100%;
+    height: 45rem;
+  }
+
+  .carousel.slid .dark-theme,
+  .carousel.slide {
+    width: 30rem;
+  }
 
 
 
@@ -1364,6 +1425,46 @@ iframe {
 
   }
 
+  .d-none{
+    display: block !important;
+
+  }
+
+  .carousel-caption.d-none.d-md-block {
+    display: block !important;
+
+
+    position: absolute;
+    bottom: 0;
+    /* Mantém o texto no final da imagem */
+    left: 0;
+    width: 100%;
+    /* Ocupa toda a largura da imagem */
+    background: rgba(0, 0, 0, 0.7);
+    /* Fundo escuro semi-transparente */
+    color: white;
+    /* Mantém o texto branco */
+    padding: 10px;
+    text-align: center;
+    font-size: 0.9rem;
+    /* Reduz um pouco o tamanho do texto */
+  }
+
+  .carousel-caption h5 {
+    font-size: 1rem;
+    /* Tamanho do título reduzido */
+    font-weight: bold;
+  }
+
+  .carousel-caption p {
+    font-size: 0.8rem;
+    /* Ajusta o tamanho do parágrafo */
+    margin: 5px 10px;
+    /* Evita que o texto fique muito colado nas bordas */
+  }
+
+
+
 
 
 
@@ -1371,20 +1472,6 @@ iframe {
     flex: 0 0 auto;
     width: 100%;
   }
-
-
-
-
-  .card-text p {
-    height: 3rem;
-
-  }
-
-
-
-
-
-
 
   .options-travel p {
 
@@ -1397,17 +1484,20 @@ iframe {
 
 @media (width <=690px) {
 
+
+
   header {
     display: flex;
     flex-direction: column;
   }
 
-
-
-  .card-body p {
-    height: 6rem;
-
+  main .dark-theme,
+  main {
+    width: 100%;
+    height: 44rem;
   }
+
+
 
 
   #navbarSupportedContent>ul {
@@ -1427,13 +1517,8 @@ iframe {
     gap: 1rem;
   }
 
-  main form {
-    height: 35rem;
-  }
 
-  .dark-theme main form {
-    height: 35rem;
-  }
+
 
 
   .settings {
@@ -1458,14 +1543,11 @@ iframe {
     height: 8rem;
   }
 
-  .form-group {
-    flex-direction: column;
-    gap: 2rem;
-  }
+
 
 }
 
-@media(max-width <=415px) {
+@media(max-width <=480px) {
 
   body {
     width: 100%;
@@ -1479,8 +1561,8 @@ iframe {
     gap: 0.5rem;
   }
 
-
-  main form {
+  main .dark-theme,
+  main {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -1490,8 +1572,13 @@ iframe {
     border-radius: 8px;
     padding: 1rem;
     width: 100%;
-    height: 1rem;
   }
+
+  .carousel.slide .dark-theme,
+  .carousel.slide {
+    width: 25rem;
+  }
+
 
 
 
