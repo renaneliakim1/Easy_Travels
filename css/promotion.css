@@ -198,6 +198,8 @@ button.btn.btn-primary,
 button.btn.btn-danger {
   --bs-btn-bg: #D34A25;
   --bs-btn-border-color: #D34A25;
+  --bs-btn-hover-bg: #ee826f;
+  --bs-btn-hover-border-color: #ee826f;
 }
 
 .carousel.slide,
