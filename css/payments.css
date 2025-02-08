@@ -178,8 +178,9 @@ main {
 }
 
 
-h1 {
+main h1 {
     text-align: center;
+    font-size: 2rem;
 }
 
 
@@ -324,7 +325,7 @@ h2 {
 
 }
 
-.dark-theme #bnt-gerar-qrcode{
+.dark-theme #bnt-gerar-qrcode {
     color: var(--texto-light);
 }
 
@@ -335,7 +336,7 @@ h2 {
 }
 
 
-.info-cartao{
+.info-cartao {
     color: #D34A25;
     font-size: 12px;
     text-align: center;
@@ -470,7 +471,7 @@ button:hover {
 
 .input_field[type="number"] {
     -moz-appearance: textfield;
-    appearance: none; 
+    appearance: none;
 }
 
 
@@ -489,7 +490,7 @@ footer {
     color: white;
     justify-content: center;
     padding: 20px;
-    border-top: var(--texto-dark);
+    border-top: solid 1px var(--texto-dark);
 
 }
 
@@ -905,6 +906,8 @@ iframe {
 
     }
 
+   
+
 
 
 
@@ -958,7 +961,7 @@ iframe {
 @media (width <=768px) {
 
 
-    main{
+    main {
         display: flex;
         justify-content: center;
         flex-direction: column;
@@ -973,7 +976,7 @@ iframe {
     }
 
 
-    .dark-theme main form{
+    .dark-theme main form {
         height: 60rem;
     }
 
@@ -983,12 +986,13 @@ iframe {
         gap: 20px;
         padding: 20px;
     }
-    .destination p{
+
+    .destination p {
         font-size: 30px;
     }
 
 
-    ul{
+    ul {
         font-size: 22px;
     }
 
@@ -1029,7 +1033,7 @@ iframe {
         gap: 1rem;
     }
 
-  
+
 
     main form {
         height: 60rem;

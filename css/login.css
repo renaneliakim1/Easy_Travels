@@ -391,7 +391,8 @@ footer {
     color: white;
     justify-content: center;
     padding: 20px;
-    border-top: var(--texto-dark);
+    border-top: solid 1px var(--texto-dark);
+
 
 }
 

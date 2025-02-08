@@ -32,7 +32,7 @@ body.dark-theme {
 
 
 
-.null{
+.null {
   width: 250px;
 }
 
@@ -86,13 +86,14 @@ header {
 }
 
 .theme a {
- text-decoration: none;
- color: #D34A25;
+  text-decoration: none;
+  color: #D34A25;
 }
+
 .theme a:hover {
   text-decoration: none;
   color: #ee826f;
- }
+}
 
 #navbarSupportedContent>ul {
   display: flex;
@@ -136,6 +137,9 @@ nav {
 
 
 
+
+
+
 main {
   display: flex;
   flex-direction: column;
@@ -144,71 +148,45 @@ main {
   text-align: center;
   padding-left: 15%;
   padding-right: 15%;
-}
-
-main form {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  gap: 1rem;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.4);
-  border-radius: 8px;
-  padding: 1rem;
-  width: 70%;
-  height: 30rem;
+  gap: 20px;
 }
 
 
-.dark-theme main form {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  gap: 1rem;
-  box-shadow: 0 2px 4px rgba(253, 253, 253, 0.4);
-  border-radius: 8px;
-  padding: 1rem;
-  width: 70%;
-  height: 30rem;
-
+strong{
+  font-size: 2.5rem;
 }
 
-.settings {
-  display: flex;
-  justify-content: space-around;
-  gap: 2rem;
-  width: 40rem;
-}
-
-
-
-.form-group {
-  display: flex;
-
-  gap: 6rem;
-}
 
 #buscar {
   width: 50%;
 }
 
 
-.form-button {
+
+
+
+.container.mt-4 {
   display: flex;
-  flex-direction: row;
   justify-content: center;
   align-items: center;
-  gap: 1.5rem;
 }
 
-input[type="date"i] {
-  padding: 0.5rem;
-  border: 1px solid #ccc;
-  border-radius: 4px;
-  font-size: 1rem;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+
+.btn-group a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
 }
+
+
+
+
+
+
+
+
+
 
 button.btn.btn-primary,
 button.btn.btn-danger {
@@ -216,125 +194,78 @@ button.btn.btn-danger {
   --bs-btn-border-color: #D34A25;
 }
 
-
-/* Estilo dos checkboxes como botões */
-.btn-checkbox {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  width: 150px;
-  height: 50px;
-  background-color: #da9f6f;
-  color: #fff;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-  font-size: 16px;
-  transition: background-color 0.3s ease, transform 0.2s ease;
+.carousel.slide,
+.carousel-item:active,
+.carousel-item,
+.d-block.w-100 {
+  width: 50rem;
+  height: 30rem;
 }
 
-/* Ocultar o checkbox padrão */
-.btn-checkbox input[type="checkbox"] {
-  display: none;
+
+
+/* Estiliza o carrossel */
+.carousel-item {
+  position: relative;
 }
 
-.btn-checkbox:hover {
-  background-color: #0056b3;
-}
-
-/* Estilo ao marcar o checkbox */
-.btn-checkbox input[type="checkbox"]:checked+span {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background-color: #e66f0e;
-  color: #fff;
-  height: 50px;
-  text-align: center;
-  border-radius: 5px;
-
-
-}
-
-/* Remover efeito de aumento de tamanho */
-.btn-checkbox span {
-  display: inline-block;
+/* Adiciona um fundo escuro sobre as imagens */
+.carousel-item::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
   width: 100%;
-  /* Garante que o texto centralize na largura fixa */
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  /* Escurece a imagem */
+  z-index: 1;
+}
+
+/* Estiliza os textos do carrossel */
+.carousel-caption {
+  position: absolute;
+  bottom: 15%;
+  left: 50%;
   text-align: center;
+  z-index: 2;
 }
 
-
-#cads {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-
+.carousel-caption h5 {
+  font-size: 2rem;
+  /* Aumenta o tamanho do título */
+  font-weight: bold;
+  color: #fff;
+  /* Cor branca para destaque */
+  text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.8);
+  /* Sombra no texto */
 }
 
-.destinations {
-  padding: 5rem;
-  font-size: 14px;
+.carousel-caption p {
+  font-size: 1.2rem;
+  color: #f8f9fa;
+  /* Branco suave */
+  text-shadow: 1px 1px 6px rgba(0, 0, 0, 0.8);
 }
 
-.card img,
-.card-body a,
-.card-text a {
-  text-decoration: none;
-  color: inherit; /* Mantém a cor padrão do texto */
-
-
-}
-
-
-
-
-
-.card-body h5 {
+/* Ajusta a descrição abaixo do carrossel */
+.description {
   text-align: center;
-  height: 3rem;
-
-}
-
-.card-text {
-  height: 9rem;
-
-}
-
-.card-body p {
-  text-align: justify;
-  font-size: 12px;
-
-
+  font-size: 1.4rem;
+  font-weight: bold;
+  color: #333;
+  background: rgba(94, 27, 1, 0.05);
+  padding: 15px;
+  border-radius: 10px;
+  margin-top: 10px;
 }
 
 
-.card-group {
-  gap: 1rem;
-}
 
-.card img {
-  width: 100%;
-  height: 16rem;
-}
 
-.options-travel {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-}
 
-.star {
-  width: 0.5rem;
-}
 
-.actions-buy {
-  display: flex;
-  align-items: center;
-  flex-direction: row;
-  gap: 0.4rem
-}
+
 
 .newsletter {
   display: flex;
@@ -370,8 +301,6 @@ footer {
   justify-content: center;
   padding: 20px;
   border-top: solid 1px var(--texto-dark);
-  
-
 
 }
 
@@ -432,14 +361,14 @@ iframe {
 }
 
 
-.social-media{
+.social-media {
   display: flex;
   justify-content: center;
   align-items: center;
   gap: 1rem;
 }
 
-.social-media a{
+.social-media a {
   text-decoration: none;
   color: inherit;
 }
@@ -1195,19 +1124,19 @@ iframe {
 }
 
 
-::-webkit-scrollbar{
+::-webkit-scrollbar {
   width: 7px;
 }
 
-::-webkit-scrollbar-track{
+::-webkit-scrollbar-track {
   border-radius: 5px;
   background-color: rgb(255, 255, 255);
 }
 
-::-webkit-scrollbar-thumb{
+::-webkit-scrollbar-thumb {
   border-radius: 8px;
   background-color: #ee826f;
-} 
+}
 
 
 
@@ -1407,7 +1336,7 @@ iframe {
 
   }
 
-  
+
 
   .input-wrapper {
     width: 100%;
@@ -1418,7 +1347,7 @@ iframe {
 }
 
 @media (max-width <=767px) {
- 
+
 
 
 
@@ -1444,7 +1373,7 @@ iframe {
   }
 
 
- 
+
 
   .card-text p {
     height: 3rem;
@@ -1468,7 +1397,7 @@ iframe {
 
 @media (width <=690px) {
 
-  header{
+  header {
     display: flex;
     flex-direction: column;
   }
@@ -1563,7 +1492,7 @@ iframe {
     width: 100%;
     height: 1rem;
   }
- 
+
 
 
 
